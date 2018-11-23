@@ -1,37 +1,17 @@
-package de.fh.albsig.beckbenjamin86251.weather;
+package de.fh.albsig.beckbenj86251.WeatherWeb;
 
 /**
  * @author Benjamin Beck
  *
  */
 public class Weather {
-    /**
-     *
-     */
+
     private String city;
-    /**
-     *
-     */
     private String region;
-    /**
-     *
-     */
     private String country;
-    /**
-     *
-     */
     private String condition;
-    /**
-     *
-     */
     private String temp;
-    /**
-     *
-     */
     private String chill;
-    /**
-     *
-     */
     private String humidity;
 
     /**
@@ -42,7 +22,8 @@ public class Weather {
     }
 
     /**
-     * @param vcity input
+     * @param vcity
+     *            input
      */
     public void setCity(final String vcity) {
         this.city = vcity;
@@ -56,7 +37,8 @@ public class Weather {
     }
 
     /**
-     * @param vregion input
+     * @param vregion
+     *            input
      */
     public void setRegion(final String vregion) {
         this.region = vregion;
@@ -70,7 +52,8 @@ public class Weather {
     }
 
     /**
-     * @param vcountry input
+     * @param vcountry
+     *            input
      */
     public void setCountry(final String vcountry) {
         this.country = vcountry;
@@ -84,7 +67,8 @@ public class Weather {
     }
 
     /**
-     * @param vcondition input
+     * @param vcondition
+     *            input
      */
     public void setCondition(final String vcondition) {
         this.condition = vcondition;
@@ -98,7 +82,8 @@ public class Weather {
     }
 
     /**
-     * @param vtemp input
+     * @param vtemp
+     *            input
      */
     public void setTemp(final String vtemp) {
         this.temp = vtemp;
@@ -112,7 +97,8 @@ public class Weather {
     }
 
     /**
-     * @param vchill input
+     * @param vchill
+     *            input
      */
     public void setChill(final String vchill) {
         this.chill = vchill;
@@ -126,7 +112,8 @@ public class Weather {
     }
 
     /**
-     * @param vhumidity input
+     * @param vhumidity
+     *            input
      */
     public void setHumidity(final String vhumidity) {
         this.humidity = vhumidity;

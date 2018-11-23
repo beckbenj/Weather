@@ -1,4 +1,4 @@
-package de.fh.albsig.beckbenjamin86251.weather;
+package de.fh.albsig.beckbenj86251.WeatherWeb;
 
 import java.io.InputStream;
 import java.util.HashMap;
@@ -15,9 +15,7 @@ import org.dom4j.io.SAXReader;
  *
  */
 public class YahooParser {
-    /**
-     *
-     */
+
     private static Logger log = Logger.getLogger(YahooParser.class);
 
     /**

@@ -1,4 +1,4 @@
-package de.fh.albsig.beckbenjamin86251.weather;
+package de.fh.albsig.beckbenj86251.WeatherWeb;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -17,23 +17,23 @@ import org.apache.velocity.exception.ResourceNotFoundException;
  *
  */
 public class WeatherFormatter {
-    /**
-     *
-     */
+
     private static Logger log = Logger.getLogger(WeatherFormatter.class);
-    /**
-     *
-     */
     private static final ClassLoader LOADER = WeatherFormatter.class
             .getClassLoader();
 
     /**
-     * @param weather w
+     * @param weather
+     *            w
      * @return String w
-     * @throws ParseErrorException w
-     * @throws MethodInvocationException w
-     * @throws ResourceNotFoundException w
-     * @throws IOException w
+     * @throws ParseErrorException
+     *             w
+     * @throws MethodInvocationException
+     *             w
+     * @throws ResourceNotFoundException
+     *             w
+     * @throws IOException
+     *             w
      */
     public final String format(final Weather weather)
             throws ParseErrorException, MethodInvocationException,

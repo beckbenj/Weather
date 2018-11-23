@@ -1,4 +1,4 @@
-package de.fh.albsig.beckbenjamin86251.weather;
+package de.fh.albsig.beckbenj86251.WeatherWeb;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,21 +13,22 @@ import org.apache.log4j.Logger;
  *
  */
 public class YahooRetriever {
-    /**
-     *
-     */
+
     private static Logger log = Logger.getLogger(YahooRetriever.class);
 
-
     /**
-     * @param city w
-     * @param country w
+     * @param city
+     *            w
+     * @param country
+     *            w
      * @return response w
-     * @throws URISyntaxException w
-     * @throws IOException w
+     * @throws URISyntaxException
+     *             w
+     * @throws IOException
+     *             w
      */
     public final InputStream retrieve(final String city, final String country)
-            throws URISyntaxException, IOException  {
+            throws URISyntaxException, IOException {
         YahooRetriever.log.info("Retrieving Weather Data");
         final String url = "https://query.yahooapis.com/v1/"
                 + "public/yql?q=select%20*%20from%20weather.forecast"

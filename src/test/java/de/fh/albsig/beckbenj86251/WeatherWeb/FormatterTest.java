@@ -1,11 +1,13 @@
-package de.fh.albsig.beckbenjamin86251.weather;
+package de.fh.albsig.beckbenj86251.WeatherWeb;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import java.io.File;
 
+import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -17,6 +19,7 @@ import org.junit.jupiter.api.TestInstance.Lifecycle;
 @TestInstance(value = Lifecycle.PER_CLASS)
 public class FormatterTest {
 
+    private static Logger log = Logger.getLogger(FormatterTest.class);
     public Weather mockedWeather;
     private Weather weather;
 
@@ -48,16 +51,20 @@ public class FormatterTest {
         this.weather.setCondition("dark");
         this.weather.setHumidity("60");
         this.weather.setCity("Berlin");
-        assertEquals(this.mockedWeather.getTemp(), this.weather.getTemp());
-        assertEquals(this.mockedWeather.getRegion(), this.weather.getRegion());
-        assertEquals(this.mockedWeather.getCountry(), this.weather.getCountry());
-        assertEquals(this.mockedWeather.getCondition(), this.weather.getCondition());
-        assertEquals(this.mockedWeather.getHumidity(), this.weather.getHumidity());
-        assertEquals(this.mockedWeather.getCity(), this.weather.getCity());
+        assertTrue(StringUtils.contains(this.mockedWeather.getTemp(),
+                this.weather.getTemp()));
+        assertTrue(StringUtils.contains(this.mockedWeather.getRegion(),
+                this.weather.getRegion()));
+        assertTrue(StringUtils.contains(this.mockedWeather.getCountry(),
+                this.weather.getCountry()));
+        assertTrue(StringUtils.contains(this.mockedWeather.getCondition(),
+                this.weather.getCondition()));
+        assertTrue(StringUtils.contains(this.mockedWeather.getHumidity(),
+                this.weather.getHumidity()));
+        assertTrue(StringUtils.contains(this.mockedWeather.getCity(),
+                this.weather.getCity()));
 
     }
-
-
 
     @AfterEach
     public void cleanEach() {
@@ -70,7 +77,7 @@ public class FormatterTest {
             final File file = new File("src/test/resources/testFormatter.txt");
             file.delete();
         } catch (final Exception e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
         }
     }
 

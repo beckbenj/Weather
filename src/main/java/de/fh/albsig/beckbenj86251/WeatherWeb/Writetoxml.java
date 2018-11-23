@@ -1,4 +1,4 @@
-package de.fh.albsig.beckbenjamin86251.weather;
+package de.fh.albsig.beckbenj86251.WeatherWeb;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -16,15 +16,15 @@ import org.dom4j.Element;
  */
 public class Writetoxml {
 
-    /**
-     *
-     */
     private Document document;
 
     /**
-     * @param weather input
-     * @param path input
-     * @throws IOException Exception
+     * @param weather
+     *            input
+     * @param path
+     *            input
+     * @throws IOException
+     *             Exception
      */
     public final void xmlOutput(final Weather weather, final String path)
             throws IOException {
