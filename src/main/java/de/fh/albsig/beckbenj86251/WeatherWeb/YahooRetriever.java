@@ -14,7 +14,7 @@ import org.apache.log4j.Logger;
  */
 public class YahooRetriever {
 
-    private static Logger log = Logger.getLogger(YahooRetriever.class);
+    private static final Logger LOGGER = Logger.getLogger(YahooRetriever.class);
 
     /**
      * @param city
@@ -29,7 +29,7 @@ public class YahooRetriever {
      */
     public final InputStream retrieve(final String city, final String country)
             throws URISyntaxException, IOException {
-        YahooRetriever.log.info("Retrieving Weather Data");
+        YahooRetriever.LOGGER.info("Retrieving Weather Data");
         final String url = "https://query.yahooapis.com/v1/"
                 + "public/yql?q=select%20*%20from%20weather.forecast"
                 + "%20where%20u%3D'c'%20and%20woeid%20in%20"

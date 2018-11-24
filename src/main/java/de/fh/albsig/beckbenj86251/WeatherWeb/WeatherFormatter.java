@@ -18,7 +18,8 @@ import org.apache.velocity.exception.ResourceNotFoundException;
  */
 public class WeatherFormatter {
 
-    private static Logger log = Logger.getLogger(WeatherFormatter.class);
+    private static final Logger LOGGER = Logger
+            .getLogger(WeatherFormatter.class);
     private static final ClassLoader LOADER = WeatherFormatter.class
             .getClassLoader();
 
@@ -39,7 +40,7 @@ public class WeatherFormatter {
             throws ParseErrorException, MethodInvocationException,
             ResourceNotFoundException, IOException {
 
-        WeatherFormatter.log.info("Formatting Weather Data");
+        WeatherFormatter.LOGGER.info("Formatting Weather Data");
 
         final Reader reader = new InputStreamReader(
                 LOADER.getResourceAsStream("output.vm"));

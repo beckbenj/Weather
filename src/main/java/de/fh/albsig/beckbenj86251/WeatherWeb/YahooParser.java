@@ -16,7 +16,7 @@ import org.dom4j.io.SAXReader;
  */
 public class YahooParser {
 
-    private static Logger log = Logger.getLogger(YahooParser.class);
+    private static final Logger LOGGER = Logger.getLogger(YahooParser.class);
 
     /**
      * @param inputStream
@@ -28,10 +28,10 @@ public class YahooParser {
     public final Weather parse(final InputStream inputStream)
             throws DocumentException {
         final Weather weather = new Weather();
-        YahooParser.log.info("Creating XML Reader");
+        YahooParser.LOGGER.info("Creating XML Reader");
         final SAXReader xmlReader = this.createXmlReader();
         final Document doc = xmlReader.read(inputStream);
-        YahooParser.log.info("Parsing XML Response");
+        YahooParser.LOGGER.info("Parsing XML Response");
         weather.setCity(
                 doc.valueOf("/query/results/channel/yweather:location/@city"));
         weather.setRegion(doc

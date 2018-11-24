@@ -34,7 +34,7 @@ public class Writetoxml {
         final Element data = root.addElement("data");
 
         data.addElement("City")
-        .addText("Current weather in:" + weather.getCity());
+                .addText("Current weather in:" + weather.getCity());
         data.addElement("Region").addText(weather.getRegion());
         data.addElement("Country").addText(weather.getCountry());
         data.addElement("Temperature").addText(weather.getTemp() + "°C");

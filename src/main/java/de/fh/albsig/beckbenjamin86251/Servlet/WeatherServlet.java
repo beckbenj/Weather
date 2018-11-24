@@ -11,14 +11,14 @@ import javax.servlet.http.HttpServletResponse;
 import de.fh.albsig.beckbenj86251.WeatherWeb.WeatherServiceAPI;
 
 /**
- * @author Ich
+ * @author Benjamin Beck
  *
  */
 public class WeatherServlet extends HttpServlet {
     @Override
     public void doGet(final HttpServletRequest request,
             final HttpServletResponse response)
-                    throws ServletException, IOException {
+            throws ServletException, IOException {
         final String city = request.getParameter("city");
         final String country = request.getParameter("country");
         final WeatherServiceAPI weatherService = new WeatherServiceAPI();
